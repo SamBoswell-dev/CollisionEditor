@@ -1,11 +1,11 @@
-workspace "RaylibTemplate"
+workspace "CollisionEditor"
 	architecture "x86"
 	configurations { "Debug", "Release"}
 	
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"	
 	
-project "RaylibTemplate"
-	location "RaylibTemplate"
+project "CollisionEditor"
+	location "CollisionEditor"
 	kind "ConsoleApp"
 	language "C++"
 	
@@ -15,12 +15,17 @@ project "RaylibTemplate"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"vendor/cJSON/cJSON.c",
+		"vendor/tinyfiledialog/tinyfiledialogs.c"
 	}
 	
 	includedirs
 	{
-		"vendor/Raylib/include"
+		"vendor/Raylib/include",
+		"vendor/raygui/include",
+		"vendor/cJSON/include",
+		"vendor/tinyfiledialog/include"
 	}
 	
 	libdirs { "vendor/Raylib/lib" }

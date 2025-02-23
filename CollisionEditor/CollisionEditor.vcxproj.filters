@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MainMenu">
+      <UniqueIdentifier>{B680ABE3-A2E3-3A88-4B69-733E37AB060B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SceneManager">
+      <UniqueIdentifier>{A5BDA7CA-91B6-C61C-BAE8-ABA1A640A628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\cJSON">
+      <UniqueIdentifier>{FF1C50F0-EB7F-DF94-9405-184B8047AB17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\tinyfiledialog">
+      <UniqueIdentifier>{566ECB32-C2DA-862D-8BCE-1E8BF7F9A895}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Application.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MainMenu\MainMenu.h">
+      <Filter>src\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SceneManager\SceneManager.h">
+      <Filter>src\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ExitMenu\ExitMenu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vendor\cJSON\cJSON.c">
+      <Filter>vendor\cJSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\tinyfiledialog\tinyfiledialogs.c">
+      <Filter>vendor\tinyfiledialog</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Application.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MainMenu\MainMenu.cpp">
+      <Filter>src\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SceneManager\SceneManager.cpp">
+      <Filter>src\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ExitMenu\ExitMenu.cpp" />
+  </ItemGroup>
+</Project>

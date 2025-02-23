@@ -11,10 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4428D5AA-30F6-C8B0-198A-39D705F7A415}</ProjectGuid>
+    <ProjectGuid>{38B1959F-A43C-0364-AD4D-865819585F64}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>RaylibTemplate</RootNamespace>
+    <RootNamespace>CollisionEditor</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -42,23 +42,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug-windows-x86\RaylibTemplate\</OutDir>
-    <IntDir>..\bin-int\Debug-windows-x86\RaylibTemplate\</IntDir>
-    <TargetName>RaylibTemplate</TargetName>
+    <OutDir>..\bin\Debug-windows-x86\CollisionEditor\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86\CollisionEditor\</IntDir>
+    <TargetName>CollisionEditor</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-windows-x86\RaylibTemplate\</OutDir>
-    <IntDir>..\bin-int\Release-windows-x86\RaylibTemplate\</IntDir>
-    <TargetName>RaylibTemplate</TargetName>
+    <OutDir>..\bin\Release-windows-x86\CollisionEditor\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86\CollisionEditor\</IntDir>
+    <TargetName>CollisionEditor</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\vendor\Raylib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vendor\Raylib\include;..\vendor\raygui\include;..\vendor\cJSON\include;..\vendor\tinyfiledialog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -76,7 +76,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\vendor\Raylib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vendor\Raylib\include;..\vendor\raygui\include;..\vendor\cJSON\include;..\vendor\tinyfiledialog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -95,10 +95,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Ball.h" />
+    <ClInclude Include="src\ExitMenu\ExitMenu.h" />
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\MainMenu\MainMenu.h" />
+    <ClInclude Include="src\SceneManager\SceneManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Ball.cpp" />
+    <ClCompile Include="..\vendor\cJSON\cJSON.c" />
+    <ClCompile Include="..\vendor\tinyfiledialog\tinyfiledialogs.c" />
+    <ClCompile Include="src\ExitMenu\ExitMenu.cpp" />
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\MainMenu\MainMenu.cpp" />
+    <ClCompile Include="src\SceneManager\SceneManager.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

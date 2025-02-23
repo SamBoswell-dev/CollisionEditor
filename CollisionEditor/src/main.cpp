@@ -1,25 +1,25 @@
 #include <iostream>
 #include "raylib.h"
-#include "Ball.h"
+#include "SceneManager/SceneManager.h"
 
 int main()
 {
 	Color backgroundColor = { 108, 153, 173, 255 };
 
-	InitWindow(800, 800, "My Template");
+	InitWindow(400, 400, "Collision Editor");
 	InitAudioDevice();
 	SetTargetFPS(60);
-
-	Ball ball;
+	SetExitKey(KEY_NULL);
 	
+
+	SceneManager sceneManager;
 
 	while (!WindowShouldClose())
 	{
-		ball.Move();
-
+		sceneManager.Update();
+		
 		BeginDrawing();
-		ClearBackground(backgroundColor);
-		ball.Draw();
+		sceneManager.Draw();
 		EndDrawing();
 	}
 	CloseWindow();
